@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/smoothness/jquery-ui.css">
+    <title>Node File Uploader</title>
+</head>
+
+<body>
+    <a href="/" class="btn btn-secondary">Home</a>
+    <div class="container">
+        <h1 class="display-2" class="mb-4">File Upload</h1>
+        <%= typeof msg !='undefined' ? msg : ''%>
+
+            <form action="upload" method="post" enctype="multipart/form-data">
+                <label for="myfile">File Input</label>
+                <input type="file" class="form-control-file" id="myfile" name="myfile" aria-describedby="fileHelp">
+                <br>
+                <br>
+                <button class="btn btn-info">Submit</button>
+            </form>
+            <br>
+            <hr>
+            <img src="<%= typeof file !='undefined' ? file : ''%>" class="img-fluid">
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
